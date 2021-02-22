@@ -13,16 +13,29 @@ struct ContentView: View {
             Button("Cancel") {
                 print("Tapped")
             }
+//            .font(.title)
+//            .padding()
+//            .background(Color.blue)
+//            .foregroundColor(Color(.systemBackground))
+//            .cornerRadius(8)
+            .buttonStyle(RoundedCornersButtonStyle())
             
             Button("OK") {
                 print("Tapped")
-            }
+            }.buttonStyle(RoundedCornersButtonStyle(backgroundColor: Color(.systemBackground),
+                                                    foregroundColor: .blue,
+                                                    strokeColor: .blue,
+                                                    cornerRadius: 14,
+                                                    shadowRadius: 5))
             
             Button {
                 print("Tapped")
             } label: {
                 Label("Delete", systemImage: "trash")
-            }
+            }.buttonStyle(RoundedCornersButtonStyle(backgroundColor: Color(.systemBackground),
+                                                    foregroundColor: .red,
+                                                    strokeColor: .red,
+                                                    pressedAnimation: .none))
             
             Button {
                 print("Tapped")
@@ -30,8 +43,9 @@ struct ContentView: View {
                 HStack {
                     Text("Fast Forward")
                     Image(systemName: "chevron.forward.2")
+                        .foregroundColor(.black)
                 }
-            }
+            }.buttonStyle(RoundedCornersButtonStyle(font: .title, padding: CGPoint(x: 24, y: 12), backgroundColor: .orange, foregroundColor: Color(.systemBackground), strokeLineWidth: 0, depthColor: Color("DarkOrange"), pressedAnimation: .scale(scale: 0.95)))
             
             Button {
                 print("Tapped")
@@ -41,7 +55,10 @@ struct ContentView: View {
                         .font(.title)
                     Text("Send")
                 }
-            }
+            }.buttonStyle(RoundedCornersButtonStyle(backgroundColor: Color(.systemBackground),
+                                                    foregroundColor: .green,
+                                                    strokeColor: .green,
+                                                    strokeLineWidth: 5))
 
         }
     }
