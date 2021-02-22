@@ -9,8 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 18) {
+            Button("Cancel") {
+                print("Tapped")
+            }
+            
+            Button("OK") {
+                print("Tapped")
+            }
+            
+            Button {
+                print("Tapped")
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+            
+            Button {
+                print("Tapped")
+            } label: {
+                HStack {
+                    Text("Fast Forward")
+                    Image(systemName: "chevron.forward.2")
+                }
+            }
+            
+            Button {
+                print("Tapped")
+            } label: {
+                VStack {
+                    Image(systemName: "paperplane.fill")
+                        .font(.title)
+                    Text("Send")
+                }
+            }
+
+        }
     }
 }
 
